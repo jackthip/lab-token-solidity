@@ -100,6 +100,14 @@ contract Lab01Token is
         return super.supportsInterface(interfaceId);
     }
 
+    function getTokens()
+        public
+        view
+        returns (Token[] memory)
+    {
+        return tokens;
+    }
+    
     event AddNewToken(
         uint256 id,
         string name,
